@@ -1,0 +1,8 @@
+<h3>List of Authors</h3>
+
+<ul>
+  <li *ngFor="let a of authors">
+    {{a.FirstName}} {{getMiddleInitial(a.MiddleName)}} {{a.LastName}}
+    &raquo; <a routerLink="./{{a.Id}}">view details</a>
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+<h3>Author View</h3>
+<div *ngIf="!author">
+  Please wait ...
+</div>
+<div *ngIf="author">
+  <h4>
+    {{author.FirstName}} {{author.MiddleName}} {{author.LastName}}
+  </h4>
+  <div>
+    <b>Genres:</b>
+    <span *ngFor="let g of author.Genres">
+      <br>
+      {{g}}
+    </span>
+  </div>
+</div>
