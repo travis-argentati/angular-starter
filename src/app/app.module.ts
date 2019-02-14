@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     HttpClientModule
   ],

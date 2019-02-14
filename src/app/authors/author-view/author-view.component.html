@@ -4,13 +4,24 @@
 </div>
 <div *ngIf="author">
   <h4>
-    {{author.FirstName}} {{author.MiddleName}} {{author.LastName}}
+    {{author.FirstName}} {{author.MiddleName | authorName}} {{author.LastName}}
   </h4>
   <div>
+    <b>Full middle name:</b> {{author.MiddleName}}
+    <br>
     <b>Genres:</b>
     <span *ngFor="let g of author.Genres">
       <br>
       {{g}}
     </span>
+  </div>
+  <br>
+  <div *ngIf="books && books.length > 0">
+    <b>Books:</b>
+    <ul>
+      <li *ngFor="let b of books">
+        {{b.Title}} ({{b.LiteraryType}}), {{b.PublicationDate}}
+      </li>
+    </ul>
   </div>
 </div>

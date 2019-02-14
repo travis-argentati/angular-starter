@@ -1,0 +1,19 @@
+<h3>Book View</h3>
+
+<div *ngIf="!book">
+  Please wait ...
+</div>
+<div *ngIf="book">
+  <h4>
+    {{book.Title}}
+  </h4>
+  <div>
+    <span *ngIf="author">
+      <b>Author:</b> {{author.FirstName}} {{author.MiddleName | authorName}} {{author.LastName}}
+      <br>
+    </span>
+    <b>Literary type:</b> {{book.LiteraryType}}
+    <br>
+    <b>Publication date:</b> {{book.PublicationDate}}
+  </div>
+</div>
